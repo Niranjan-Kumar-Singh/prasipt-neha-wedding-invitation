@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Prasipt & Neha — Wedding Invitation | 21 June 2026</title>
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description"
+    content="You are cordially invited to the wedding ceremony of Prasipt Kumar Singh & Neha Kumari on 21 June 2026 at Vaishali, Bihar. Reception on 26 June 2026 at Siliguri, West Bengal.">
+  <meta name="keywords"
+    content="Prasipt Kumar Singh, Neha Kumari, Wedding Invitation, Marriage, June 2026, Vaishali Bihar, Siliguri West Bengal">
+  <meta name="author" content="Prasipt & Neha">
+  
+  <!-- Developer Details -->
+  <meta name="developer" content="Niranjan Kumar Singh">
+  <meta name="developer-email" content="niranjansingh1419@gmail.com">
+  <meta name="developer-instagram" content="niranjan.ks.in">
+
+  <meta property="og:title" content="Prasipt & Neha — Wedding Invitation">
+  <meta property="og:description"
+    content="Join us in celebrating the union of Prasipt Kumar Singh & Neha Kumari. Wedding: 21 June 2026, Vaishali. Reception: 26 June 2026, Siliguri.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prasipt & Neha — Wedding Invitation">
+  <meta name="twitter:description" content="Wedding: 21 June 2026 | Reception: 26 June 2026">
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Alex+Brush&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Prevent White Flash on Load -->
+  <style>
+    html,
+    body {
+      background-color: #FDFBF7;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background-color: #FDFBF7;">
+
+  <!-- Background Ambient Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Interactive Desktop Cursor Glow -->
+  <div id="cursor-glow" class="hidden md:block"></div>
+
+  <!-- Audio Player (Background Music) -->
+  <audio id="bg-music" loop>
+    <source src="assets/audio/audio.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="seal-sound" preload="auto">
+    <source src="assets/audio/seal-chime.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- 1. CINEMATIC PRELOADER -->
+  <div id="preloader" class="preloader-overlay">
+    <div class="preloader-glow"></div>
+    <div class="preloader-content">
+      <!-- Premium Preloader Graphic -->
+      <div class="ganesh-logo-wrapper mb-4">
+        <div class="ring-outer"></div>
+        <div class="ring-inner"></div>
+        <img src="assets/images/generated-image.png" alt="Ganesh Ji" class="ganesh-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback-om" style="display: none;">ॐ</div>
+      </div>
+      <p class="font-hindi text-gold-metal mb-4" style="font-size: 1.25rem; opacity: 0.9; letter-spacing: 0.05em;">॥
+        श्री गणेशाय नमः ॥</p>
+      <div class="preloader-title-wrap relative">
+        <h1 class="preloader-title font-heading text-gold-metal shimmer-text">Prasipt & Neha</h1>
+      </div>
+      <p class="preloader-date font-heading"
+        style="color: #D4AF37; opacity: 0.8; letter-spacing: 0.1em; margin-bottom: 24px;">21 • 06 • 2026</p>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar-bg">
+          <div id="progress-bar" class="progress-bar-fill"></div>
+        </div>
+        <div id="progress-indicator" class="progress-indicator-dot"></div>
+      </div>
+      <p class="preloader-subtitle font-body transition-all duration-700" id="preloader-status-text">Inviting You To
+        Celebrate</p>
+    </div>
+  </div>
+
+  <!-- 2. ENVELOPE OPENING OVERLAY -->
+  <div id="envelope-overlay" class="envelope-overlay hidden">
+    <div class="envelope-container">
+
+      <!-- Back & Card base -->
+      <div class="envelope-back"></div>
+
+      <!-- The Invitation Card inside the envelope -->
+      <div id="envelope-card" class="envelope-card">
+        <div class="envelope-card-content">
+          <span class="env-label font-body">Wedding Invitation</span>
+          <div class="env-divider"></div>
+
+          <div class="env-shloka mb-3">
+            <p class="font-hindi">
+              वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>
+              निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+            </p>
+          </div>
+
+          <div class="env-names">
+            <h2 class="font-cursive">Prasipt & Neha</h2>
+            <p class="font-hindi env-sub">शुभ विवाह</p>
+          </div>
+
+          <p class="env-msg font-heading">
+            With the divine blessings of our families, we cordially invite you to celebrate the holy union of our
+            hearts.
+          </p>
+
+          <div class="env-date">
+            <p class="font-heading date-highlight">Sunday, 21 June 2026</p>
+            <p class="font-body loc-highlight">Vaishali, Bihar</p>
+          </div>
+
+          <div class="env-actions">
+            <button id="enter-btn" class="btn-royal py-2 px-5 hidden">Enter Invitation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Envelope Sleeve Front Cover -->
+      <div class="envelope-front-sleeve">
+        <div class="sleeve-border"></div>
+      </div>
+
+      <!-- Envelope Top Flap -->
+      <div id="envelope-flap" class="envelope-top-flap"></div>
+
+      <!-- Wax Seal Button -->
+      <button id="wax-seal" class="wax-seal-btn">
+        <div class="wax-seal-pulse"></div>
+        <span class="wax-seal-symbol">ॐ</span>
+        <span class="wax-seal-text font-body">Open</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- FLOATING MUSIC PLAYER -->
+  <button id="music-toggle" class="music-player-floating music-player-glass hidden">
+    <div class="music-wave">
+      <span class="wave-bar"></span>
+      <span class="wave-bar"></span>
+      <span class="wave-bar"></span>
+    </div>
+    <span class="music-player-text font-body">♫ Wedding Music</span>
+  </button>
+
+  <!-- MAIN SCROLLING CONTENT FLOW -->
+  <main id="main-content" class="w-full hidden">
+    <div class="main-container mx-auto w-full">
+
+      <!-- 3. HERO SECTION -->
+      <section id="hero" class="hero-section relative bg-mandala">
+        <div class="hero-lights">
+          <div class="light-orb orb-top"></div>
+          <div class="light-orb orb-bottom"></div>
+        </div>
+
+        <!-- Canvas for Sparkles -->
+        <canvas id="hero-canvas" class="hero-canvas-el"></canvas>
+
+        <div class="hero-content relative z-10 text-center flex-center flex-col py-16 site-inner">
+          <p class="hero-intro font-body reveal"
+            style="color: #6B7280; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem;">
+            Together With Our Families</p>
+
+          <!-- Calligraphy Names -->
+          <div class="hero-names reveal delay-1">
+            <h1 class="hero-title"
+              style="font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 10vw, 5rem); line-height: 1; color: #D4AF37; text-shadow: 0 4px 15px rgba(212,175,55,0.2);">
+              Prasipt Kumar Singh</h1>
+            <div class="names-separator" style="margin: 0.5rem 0;">
+              <span class="font-heading ampersand"
+                style="font-family: 'Alex Brush', cursive; font-size: clamp(2.5rem, 6vw, 4rem); color: #8B1E3F;">&amp;</span>
+            </div>
+            <h1 class="hero-title"
+              style="font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 10vw, 5rem); line-height: 1; color: #D4AF37; text-shadow: 0 4px 15px rgba(212,175,55,0.2);">
+              Neha Kumari</h1>
+          </div>
+
+          <!-- Ganesh SVG Motif -->
+          <div class="hero-ganesh reveal delay-2">
+            <img src="assets/images/generated-image.png" alt="Ganesh Ji"
+              style="width: 110px; height: auto; object-fit: contain; margin: 0 auto; filter: drop-shadow(0 0 8px rgba(212,175,55,0.3));" />
+          </div>
+
+          <!-- Date / Location -->
+          <div class="hero-date reveal delay-3" style="margin-top: 12px; margin-bottom: 17px;">
+            <p class="font-heading date-text" style="font-size: 1.4rem; letter-spacing: 0.2em; color: #1F2937;">21 JUNE
+              2026</p>
+            <p class="font-body location-text" style="font-size: 0.9rem; color: #6B7280; letter-spacing: 0.1em;">
+              VAISHALI, BIHAR</p>
+          </div>
+
+
+          <!-- Emotional Moment 1 -->
+          <p class="font-heading text-xl reveal delay-4"
+            style="color: #4B5563; font-style: italic; letter-spacing: 0.05em;">"Two hearts, one destiny."</p>
+
+          <!-- Sanskrit Verse (Secondary) -->
+          <div class="shloka-container mb-4 reveal delay-5" style="transform: scale(0.85); opacity: 0.8;">
+            <div class="shloka-box"
+              style="padding: 1rem 1.5rem; border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2); background: rgba(212, 175, 55, 0.03);">
+              <p class="font-hindi shloka-text" style="font-size: 0.9rem; line-height: 1.6;">
+                वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>
+                निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator reveal delay-5">
+          <span class="font-body scroll-text">Scroll Down</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+      <div class="luxury-divider"></div>
+
+      <!-- 4. THE UNION SECTION -->
+      <section id="union" class="new-union-section section-padding relative overflow-hidden">
+        <div class="union-ambient-glow hidden lg:block"
+          style="position:absolute; top:50%; left:50%; width:800px; height:800px; background:radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%); transform:translate(-50%,-50%); z-index:0; pointer-events:none;">
+        </div>
+        <div class="site-inner relative z-10 w-full mx-auto" style="max-width: 1440px;">
+          <!-- Header -->
+          <div class="text-center mb-12 reveal reveal-stagger">
+            <span class="section-label" style="color: var(--deep-maroon);">The Union</span>
+          </div>
+
+          <!-- Main Unified Composition -->
+          <div class="unified-couple-board reveal delay-1 w-full">
+            <div
+              class="union-responsive-layout relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4 w-full">
+              <!-- Subtle Sacred Thread Connector (Desktop Only) -->
+              <div class="hidden lg:block absolute top-[110px] left-[20%] right-[20%] h-px z-[-1]"
+                style="background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);"></div>
+
+              <!-- Groom -->
+              <div class="couple-side groom-side flex flex-col items-center text-center w-full lg:w-1/3">
+                <div class="premium-avatar-wrap mb-6">
+                  <div class="premium-avatar-ring"></div>
+                  <img src="assets/images/groom_avatar.png" alt="Groom" class="premium-avatar-img">
+                </div>
+                <h3 class="premium-name font-heading" style="color: var(--primary-gold);">PRASIPT KUMAR SINGH</h3>
+
+                <div class="mobile-parents-flow mt-4">
+                  <p class="font-body uppercase tracking-widest text-sm text-gray-500 mb-2">The Groom's Family</p>
+                  <p class="font-heading text-lg text-gray-800">Sri Upendra Singh<br><span
+                      style="color:var(--primary-gold);">&amp;</span><br>Smt. Geeta Devi</p>
+                </div>
+              </div>
+
+
+
+              <!-- Desktop Centerpiece / Mobile Centerpiece -->
+              <div
+                class="centerpiece-hero flex flex-col items-center justify-center text-center px-4 z-10 w-full lg:w-1/3"
+                style="position: relative;">
+                <div class="centerpiece-mandala absolute"
+                  style="opacity: 0.1; width: 100%; height: 100%; background: url('assets/images/mandala_bg.png') center/contain no-repeat; z-index:-1;">
+                </div>
+
+                <!-- Ganesh Ji Motif in center -->
+                <div class="flex-center mb-6">
+                  <img src="assets/images/generated-image.png" alt="Ganesh Ji"
+                    style="width: 100px; height: auto; filter: drop-shadow(0 0 10px rgba(212,175,55,0.3));" />
+                </div>
+
+                <p class="font-heading text-xl md:text-2xl mb-4" style="color: var(--deep-maroon);">Two Souls, One
+                  Journey</p>
+                <div class="font-heading text-xl md:text-2xl"
+                  style="color: var(--primary-gold); letter-spacing: 0.1em;">21 JUNE 2026</div>
+              </div>
+
+
+
+              <!-- Bride -->
+              <div class="couple-side bride-side flex flex-col items-center text-center w-full lg:w-1/3">
+                <div class="premium-avatar-wrap mb-6">
+                  <div class="premium-avatar-ring"></div>
+                  <img src="assets/images/bride_avatar.png" alt="Bride" class="premium-avatar-img">
+                </div>
+                <h3 class="premium-name font-heading" style="color: var(--primary-gold);">NEHA KUMARI</h3>
+
+                <div class="mobile-parents-flow mt-4">
+                  <p class="font-body uppercase tracking-widest text-sm text-gray-500 mb-2">The Bride's Family</p>
+                  <p class="font-heading text-lg text-gray-800">Sri Umakant Singh<br><span
+                      style="color:var(--primary-gold);">&amp;</span><br>Smt. Rina Devi</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="luxury-divider"></div>
+
+      <!-- NEW: CELEBRATION MESSAGE SECTION -->
+      <section id="celebration" class="section-padding relative overflow-hidden"
+        style="background-color: var(--warm-ivory);">
+        <div class="site-inner max-w-3xl mx-auto text-center reveal reveal-stagger">
+          <div class="mb-6 reveal delay-1">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="#D4AF37" stroke-width="1.5"
+              class="mx-auto opacity-70">
+              <path d="M20 5 L23 17 L35 20 L23 23 L20 35 L17 23 L5 20 L17 17 Z" />
+            </svg>
+          </div>
+          <p class="font-heading reveal delay-2"
+            style="font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1.5; color: #1F2937; margin-bottom: 24px;">
+            From two families to one beautiful beginning...
+          </p>
+          <div class="ornament-divider reveal delay-3" style="max-width: 120px; margin: 0 auto 32px;">
+            <span class="ornament-dot"></span>
+          </div>
+          <p class="font-body reveal delay-4"
+            style="color: #4B5563; font-size: clamp(1rem, 3vw, 1.25rem); max-width: 600px; margin: 0 auto; line-height: 1.8;">
+            With the blessings of our families and the love of those closest to us, we invite you to witness the
+            beginning of our forever.
+          </p>
+        </div>
+      </section>
+
+      <div class="luxury-divider"></div>
+
+      <!-- 5. COUNTDOWN SECTION -->
+      <section id="countdown" class="countdown-section section-padding relative overflow-hidden"
+        style="background: linear-gradient(135deg, var(--deep-maroon) 0%, #4A0E1B 100%);">
+        <div class="glowing-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+        </div>
+
+        <!-- Animated glowing diyas -->
+        <div class="diya-glow-widget left-diya">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M10,38 C10,48 20,52 30,52 C40,52 50,48 50,38 C50,38 45,34 30,34 C15,34 10,38 10,38 Z"
+              fill="#9B2D52" opacity="0.8" />
+            <path d="M10,38 C10,48 20,52 30,52 C40,52 50,48 50,38 C50,38 45,34 30,34 C15,34 10,38 10,38 Z"
+              stroke="#D4AF37" stroke-width="1" />
+            <ellipse cx="30" cy="37" rx="17" ry="4" fill="#D4AF37" opacity="0.6" />
+            <path class="diya-flame" d="M30,35 C27,30 27,20 30,10 C33,20 33,30 30,35 Z" fill="url(#flameGrad)" />
+          </svg>
+        </div>
+        <div class="diya-glow-widget right-diya">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M10,38 C10,48 20,52 30,52 C40,52 50,48 50,38 C50,38 45,34 30,34 C15,34 10,38 10,38 Z"
+              fill="#9B2D52" opacity="0.8" />
+            <path d="M10,38 C10,48 20,52 30,52 C40,52 50,48 50,38 C50,38 45,34 30,34 C15,34 10,38 10,38 Z"
+              stroke="#D4AF37" stroke-width="1" />
+            <ellipse cx="30" cy="37" rx="17" ry="4" fill="#D4AF37" opacity="0.6" />
+            <path class="diya-flame" d="M30,35 C27,30 27,20 30,10 C33,20 33,30 30,35 Z" fill="url(#flameGrad)" />
+          </svg>
+        </div>
+
+        <svg style="width:0; height:0; position:absolute;">
+          <defs>
+            <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#D4AF37" />
+              <stop offset="60%" stop-color="#D4AF37" />
+              <stop offset="100%" stop-color="#FFF" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="site-inner relative z-10 text-center">
+
+          <!-- Header -->
+          <div class="reveal mb-14">
+            <span class="section-label text-gold-metal" style="letter-spacing: 0.25em; text-transform: uppercase;">The
+              Celebration Begins In</span>
+            <p class="font-heading mb-4 text-white/90" style="font-size: 1.5rem; letter-spacing: 0.15em;">21 JUNE 2026
+            </p>
+            <h2 class="section-title font-heading text-white" style="font-size: clamp(2rem, 6vw, 3.5rem);">Counting Down
+              To Forever</h2>
+            <div class="ornament-divider" style="max-width: 160px; margin: 0 auto;">
+              <span class="ornament-dot"></span>
+            </div>
+          </div>
+
+          <!-- Timer Cards block -->
+          <div id="timer-display-group" class="reveal delay-1">
+            <!-- Loading layout initially, will be populated by JS -->
+            <div class="flex flex-wrap justify-center gap-2.5 sm:gap-6 w-full">
+
+              <!-- Days -->
+              <div class="flex flex-col items-center w-[72px] sm:w-[96px] md:w-[110px] flex-none">
+                <div class="glass-time-card">
+                  <div class="inner-time-border"></div>
+                  <span id="days" class="time-number font-heading">00</span>
+                </div>
+                <p class="time-label font-body">Days</p>
+              </div>
+
+              <!-- Hours -->
+              <div class="flex flex-col items-center w-[72px] sm:w-[96px] md:w-[110px] flex-none">
+                <div class="glass-time-card">
+                  <div class="inner-time-border"></div>
+                  <span id="hours" class="time-number font-heading">00</span>
+                </div>
+                <p class="time-label font-body">Hours</p>
+              </div>
+
+              <!-- Minutes -->
+              <div class="flex flex-col items-center w-[72px] sm:w-[96px] md:w-[110px] flex-none">
+                <div class="glass-time-card">
+                  <div class="inner-time-border"></div>
+                  <span id="minutes" class="time-number font-heading">00</span>
+                </div>
+                <p class="time-label font-body">Mins</p>
+              </div>
+
+              <!-- Seconds -->
+              <div class="flex flex-col items-center w-[72px] sm:w-[96px] md:w-[110px] flex-none">
+                <div class="glass-time-card">
+                  <div class="inner-time-border"></div>
+                  <span id="seconds" class="time-number font-heading">00</span>
+                </div>
+                <p class="time-label font-body">Secs</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom star divider -->
+          <div class="reveal delay-2 mt-16 flex items-center justify-center gap-4 opacity-45">
+            <div class="line line-left"
+              style="max-width: 80px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4)); height: 1px;">
+            </div>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="#D4AF37">
+              <path d="M6 0.5 L7.2 4 L11 4.5 L8.5 7 L9.2 11 L6 9 L2.8 11 L3.5 7 L1 4.5 L4.8 4 Z" />
+            </svg>
+            <div class="line line-right"
+              style="max-width: 80px; background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent); height: 1px;">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="luxury-divider"></div>
+
+      <!-- 6. WEDDING CEREMONY SECTION -->
+      <section id="wedding" class="section-padding bg-warm-cream relative">
+        <div class="site-inner z-10">
+
+          <!-- Header -->
+          <div class="text-center mb-12 reveal reveal-stagger">
+            <span class="section-label" style="color: #8B1E3F;">The Celebration Chapter</span>
+            <h2 class="section-title font-heading" style="color: #1F2937;">Wedding Ceremony</h2>
+            <div class="ornament-divider" style="max-width: 160px; margin: 0 auto 16px;">
+              <span class="ornament-dot" style="background-color: var(--heading);"></span>
+            </div>
+            <p class="font-heading" style="font-size: 1.25rem; font-style: italic; color: #4B5563;">
+              "Where sacred vows unite two hearts forever."
+            </p>
+          </div>
+
+          <!-- Card Wrapper -->
+          <div class="reveal delay-1 w-full">
+            <div class="card-royal overflow-hidden relative premium-hover"
+              style="background: linear-gradient(135deg, #FFFCF9 0%, #FFF5ED 100%);">
+              <div class="top-gradient-strip"
+                style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 35%; z-index: 10; background: linear-gradient(90deg, #D4AF37, #8B1E3F, #D4AF37); height: 4px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-12 items-stretch">
+                <!-- Left Details (7/12 cols) -->
+                <div
+                  class="p-8 sm:p-10 md:p-12 md:col-span-7 flex flex-col justify-center text-center border-b md:border-b-0 md:border-r border-[rgba(212,175,55,0.15)] relative"
+                  style="background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(253,251,247,0.2) 100%);">
+
+                  <!-- Mandap Illustration -->
+                  <div class="flex justify-center mb-6 relative">
+                    <div class="absolute w-24 h-24 bg-[#D4AF37] opacity-20 rounded-full blur-xl animate-pulse"
+                      style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    <svg viewBox="0 0 60 60" width="80" height="80" fill="none" class="opacity-100 relative z-10"
+                      role="img" aria-label="Traditional Wedding Mandap">
+                      <!-- Base -->
+                      <rect x="10" y="50" width="40" height="4" fill="#8B1E3F" />
+                      <rect x="5" y="54" width="50" height="4" fill="#D4AF37" />
+                      <!-- Pillars -->
+                      <rect x="12" y="25" width="4" height="25" fill="#D4AF37" />
+                      <rect x="44" y="25" width="4" height="25" fill="#D4AF37" />
+                      <rect x="22" y="30" width="2" height="20" fill="#E5E7EB" />
+                      <rect x="36" y="30" width="2" height="20" fill="#E5E7EB" />
+                      <!-- Canopy -->
+                      <path d="M10 25 L30 10 L50 25 Z" fill="#8B1E3F" />
+                      <!-- Floral Decor -->
+                      <circle cx="20" cy="25" r="2" fill="#F5E17A" />
+                      <circle cx="30" cy="25" r="3" fill="#D4AF37" />
+                      <circle cx="40" cy="25" r="2" fill="#F5E17A" />
+                      <!-- Sacred Fire -->
+                      <path d="M30 40 C28 45 28 50 30 50 C32 50 32 45 30 40 Z" fill="#F5E17A" />
+                    </svg>
+                  </div>
+
+                  <!-- Date & Time -->
+                  <p class="section-mini-heading font-body tracking-widest text-xs uppercase"
+                    style="color: #8B1E3F; margin-bottom: 8px;">Date &amp; Time</p>
+                  <h3 class="card-heading font-heading"
+                    style="font-size: 2.25rem; background: linear-gradient(90deg, #8B1E3F, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    21 June 2026</h3>
+                  <p class="card-sub-paragraph font-body italic" style="color: #4B5563;">Sunday · From 7:00 PM Onwards
+                  </p>
+
+                  <div class="flex justify-center my-8 opacity-70">
+                    <svg width="120" height="15" viewBox="0 0 120 15" fill="none">
+                      <path d="M0 7.5 H45 M75 7.5 H120" stroke="#D4AF37" stroke-width="0.5" />
+                      <circle cx="60" cy="7.5" r="3" fill="#8B1E3F" />
+                      <circle cx="53" cy="7.5" r="1.5" fill="#D4AF37" />
+                      <circle cx="67" cy="7.5" r="1.5" fill="#D4AF37" />
+                    </svg>
+                  </div>
+
+                  <!-- Venue -->
+                  <p class="section-mini-heading font-body tracking-widest text-xs uppercase"
+                    style="color: #8B1E3F; margin-bottom: 8px;">Venue Address</p>
+                  <p class="venue-address-main font-heading" style="color: #1F2937; font-size: 1.25rem;">Rasulpur Turki,
+                    Asoi, Bhagwanpur,
+                    Vaishali, Bihar</p>
+                  <p class="card-sub-paragraph font-body italic" style="margin-top: 4px; color: #4B5563;">Vaishali,
+                    Bihar</p>
+
+                </div>
+
+                <!-- Right Action (5/12 cols) -->
+                <div
+                  class="p-8 sm:p-10 md:p-12 md:col-span-5 flex flex-col justify-center items-center relative overflow-hidden"
+                  style="background: linear-gradient(135deg, rgba(212,175,55,0.04) 0%, rgba(139,30,63,0.06) 100%);">
+                  <!-- Decorative Motif -->
+                  <div class="motif-graphic mb-8 hidden md:block opacity-60">
+                    <svg viewBox="0 0 100 100" width="80" height="80" fill="none" stroke="#D4AF37" stroke-width="1">
+                      <circle cx="50" cy="50" r="30" stroke-dasharray="3 3" />
+                      <circle cx="50" cy="50" r="10" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(0 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(45 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(90 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(135 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(180 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(225 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(270 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(315 50 50)" />
+                    </svg>
+                  </div>
+
+                  <div class="buttons-stack w-full flex-col gap-4 flex items-center">
+                    <button class="btn-royal py-3 px-6 w-full text-center add-calendar-btn" data-event="wedding">
+                      Add to Calendar
+                    </button>
+                    <button class="btn-secondary w-full share-event-btn" data-event="wedding">
+                      Share Event
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="luxury-divider"></div>
+
+      <!-- 7. RECEPTION SECTION -->
+      <section id="reception" class="section-padding bg-cream relative">
+        <div class="reception-ambient-glow"></div>
+        <div class="site-inner z-10 relative">
+
+          <!-- Header -->
+          <div class="text-center mb-12 reveal reveal-stagger">
+            <span class="section-label" style="color: #8B1E3F;">The Celebration Chapter</span>
+            <h2 class="section-title font-heading" style="color: #1F2937;">Reception</h2>
+            <div class="ornament-divider" style="max-width: 160px; margin: 0 auto 16px;">
+              <span class="ornament-dot" style="background-color: var(--heading);"></span>
+            </div>
+            <p class="font-heading" style="font-size: 1.25rem; font-style: italic; color: #4B5563;">
+              "An evening of joy, laughter and togetherness."
+            </p>
+          </div>
+
+          <!-- Card Wrapper -->
+          <div class="reveal delay-1 w-full">
+            <div class="card-royal overflow-hidden relative premium-hover"
+              style="background: linear-gradient(135deg, #FFFCF9 0%, #FFF5ED 100%);">
+              <div class="top-gradient-strip"
+                style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 35%; z-index: 10; background: linear-gradient(90deg, #8B1E3F, #D4AF37, #8B1E3F); height: 4px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-12 items-stretch">
+                <!-- Left Details (7/12 cols) -->
+                <div
+                  class="p-8 sm:p-10 md:p-12 md:col-span-7 flex flex-col justify-center text-center border-b md:border-b-0 md:border-r border-[rgba(212,175,55,0.15)] relative"
+                  style="background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(253,251,247,0.2) 100%);">
+
+                  <!-- Festive Motif -->
+                  <div class="flex justify-center mb-6 relative">
+                    <div class="absolute w-24 h-24 bg-[#D4AF37] opacity-20 rounded-full blur-xl animate-pulse"
+                      style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                    <svg viewBox="0 0 60 60" width="80" height="80" fill="none" class="opacity-100 relative z-10"
+                      role="img" aria-label="Festive Celebration Glasses">
+                      <!-- Glasses -->
+                      <path d="M15 15 L25 40 L28 40 L28 50 M25 50 L31 50" stroke="#D4AF37" stroke-width="2" />
+                      <path d="M45 15 L35 40 L32 40 L32 50 M35 50 L29 50" stroke="#D4AF37" stroke-width="2" />
+                      <!-- Glass Fill -->
+                      <path d="M17 20 L23 35 L19 20 Z" fill="#F5E17A" opacity="0.6" />
+                      <path d="M43 20 L37 35 L41 20 Z" fill="#F5E17A" opacity="0.6" />
+                      <!-- Sparkles -->
+                      <circle cx="30" cy="10" r="1.5" fill="#8B1E3F" />
+                      <circle cx="20" cy="5" r="1" fill="#D4AF37" />
+                      <circle cx="40" cy="5" r="1" fill="#D4AF37" />
+                      <circle cx="25" cy="18" r="1" fill="#F5E17A" />
+                      <circle cx="35" cy="18" r="1" fill="#F5E17A" />
+                    </svg>
+                  </div>
+
+                  <!-- Date & Time -->
+                  <p class="section-mini-heading font-body tracking-widest text-xs uppercase"
+                    style="color: #8B1E3F; margin-bottom: 8px;">Date &amp; Time</p>
+                  <h3 class="card-heading font-heading"
+                    style="font-size: 2.25rem; background: linear-gradient(90deg, #8B1E3F, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    26 June 2026</h3>
+                  <p class="card-sub-paragraph font-body italic" style="color: #4B5563;">Friday · From 7:00 PM Onwards
+                  </p>
+
+                  <div class="flex justify-center my-8 opacity-70">
+                    <svg width="120" height="15" viewBox="0 0 120 15" fill="none">
+                      <path d="M0 7.5 H45 M75 7.5 H120" stroke="#D4AF37" stroke-width="0.5" />
+                      <circle cx="60" cy="7.5" r="3" fill="#8B1E3F" />
+                      <circle cx="53" cy="7.5" r="1.5" fill="#D4AF37" />
+                      <circle cx="67" cy="7.5" r="1.5" fill="#D4AF37" />
+                    </svg>
+                  </div>
+
+                  <!-- Venue -->
+                  <p class="section-mini-heading font-body tracking-widest text-xs uppercase"
+                    style="color: #8B1E3F; margin-bottom: 8px;">Venue Address</p>
+                  <p class="venue-address-main font-heading" style="color: #1F2937; font-size: 1.25rem;">Own Residence,
+                    Shantipara, Ward No.
+                    42, Salugara, Siliguri, Jalpaiguri, West Bengal</p>
+                  <p class="card-sub-paragraph font-body italic" style="margin-top: 4px; color: #4B5563;">Siliguri, West
+                    Bengal</p>
+
+                </div>
+
+                <!-- Right Action (5/12 cols) -->
+                <div
+                  class="p-8 sm:p-10 md:p-12 md:col-span-5 flex flex-col justify-center items-center relative overflow-hidden"
+                  style="background: linear-gradient(135deg, rgba(212,175,55,0.04) 0%, rgba(139,30,63,0.06) 100%);">
+                  <!-- Decorative Motif -->
+                  <div class="motif-graphic mb-8 hidden md:block opacity-60" style="color: #D4AF37;">
+                    <svg viewBox="0 0 100 100" width="80" height="80" fill="none" stroke="currentColor"
+                      stroke-width="1">
+                      <circle cx="50" cy="50" r="30" stroke-dasharray="3 3" />
+                      <circle cx="50" cy="50" r="10" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(0 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(45 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(90 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(135 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(180 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(225 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(270 50 50)" />
+                      <line x1="50" y1="20" x2="50" y2="35" transform="rotate(315 50 50)" />
+                    </svg>
+                  </div>
+
+                  <div class="buttons-stack w-full flex-col gap-4 flex items-center">
+                    <button class="btn-royal py-3 px-6 w-full text-center add-calendar-btn" data-event="reception">
+                      Add to Calendar
+                    </button>
+                    <button class="btn-secondary w-full share-event-btn" data-event="reception">
+                      Share Event
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="luxury-divider"></div>
+
+      <!-- 8. FIND YOUR WAY SECTION -->
+      <section id="directions" class="section-padding bg-mandala">
+        <div class="site-inner">
+
+          <!-- Header -->
+          <div class="text-center mb-16 reveal reveal-stagger">
+            <span class="section-label">Location Guides</span>
+            <h2 class="section-title font-heading">Find Your Way</h2>
+            <div class="ornament-divider" style="max-width: 160px; margin: 0 auto;">
+              <span class="ornament-dot"></span>
+            </div>
+          </div>
+
+          <!-- Cards grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+            <!-- Wedding Map Card -->
+            <div class="reveal delay-1 w-full h-full">
+              <div class="card-royal overflow-hidden flex flex-col h-full w-full relative premium-hover"
+                style="background: linear-gradient(135deg, #FFFCF9 0%, #FFF5ED 100%);">
+                <div class="top-accent-bar"
+                  style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 35%; z-index: 10; background: linear-gradient(90deg, #D4AF37, #8B1E3F, #D4AF37); height: 4px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                  <!-- Card Header -->
+                  <div class="flex flex-col items-center text-center gap-2 mb-4">
+                    <div class="pin-icon-wrap"
+                      style="background-color: rgba(212, 175, 55, 0.05); border-color: rgba(212, 175, 55, 0.2)">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="panel-title font-heading"
+                        style="font-size: 1.75rem; background: linear-gradient(90deg, #8B1E3F, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Wedding Ceremony</h3>
+                      <p class="panel-city font-body tracking-widest text-xs uppercase"
+                        style="color: #4B5563; margin-top: 4px;">Vaishali, Bihar</p>
+                    </div>
+                  </div>
+
+                  <!-- Iframe map -->
+                  <div class="map-iframe-container mb-6">
+                    <iframe src="https://www.google.com/maps?q=Bhagwanpur,Vaishali,Bihar,India&output=embed"
+                      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade" title="Wedding Ceremony Map"></iframe>
+                  </div>
+
+                  <!-- Address -->
+                  <p class="map-card-address font-heading">Rasulpur Turki, Asoi, Bhagwanpur, Vaishali, Bihar</p>
+
+                  <!-- Buttons -->
+                  <div class="map-actions-grid mt-auto pt-4">
+                    <a href="https://maps.google.com/?q=Rasulpur+Turki,Asoi,Bhagwanpur,Vaishali,Bihar,India"
+                      target="_blank" rel="noopener noreferrer"
+                      class="btn-royal py-3 px-6 text-center text-xs flex items-center justify-center gap-2 navigate-link"
+                      style="border-radius: 30px;">
+                      Navigate
+                    </a>
+                    <button class="btn-secondary copy-address-btn" style="border-radius: 30px;"
+                      data-address="Rasulpur Turki, Asoi, Bhagwanpur, Vaishali, Bihar">
+                      Copy Address
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reception Map Card -->
+            <div class="reveal delay-2 w-full h-full">
+              <div class="card-royal overflow-hidden flex flex-col h-full w-full relative premium-hover"
+                style="background: linear-gradient(135deg, #FFFCF9 0%, #FFF5ED 100%);">
+                <div class="top-accent-bar"
+                  style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 35%; z-index: 10; background: linear-gradient(90deg, #8B1E3F, #D4AF37, #8B1E3F); height: 4px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                  <!-- Card Header -->
+                  <div class="flex flex-col items-center text-center gap-2 mb-4">
+                    <div class="pin-icon-wrap"
+                      style="background-color: rgba(212, 175, 55, 0.05); border-color: rgba(212, 175, 55, 0.2)">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="panel-title font-heading"
+                        style="font-size: 1.75rem; background: linear-gradient(90deg, #8B1E3F, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Reception</h3>
+                      <p class="panel-city font-body tracking-widest text-xs uppercase"
+                        style="color: #4B5563; margin-top: 4px;">Siliguri, West Bengal</p>
+                    </div>
+                  </div>
+
+                  <!-- Iframe map -->
+                  <div class="map-iframe-container mb-6">
+                    <iframe src="https://www.google.com/maps?q=Salugara,Siliguri,West+Bengal,India&output=embed"
+                      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade" title="Reception Map"></iframe>
+                  </div>
+
+                  <!-- Address -->
+                  <p class="map-card-address font-heading">Own Residence, Shantipara, Ward No. 42, Salugara, Siliguri,
+                    Jalpaiguri, West Bengal</p>
+
+                  <!-- Buttons -->
+                  <div class="map-actions-grid mt-auto pt-4">
+                    <a href="https://maps.google.com/?q=Shantipara,Salugara,Siliguri,Jalpaiguri,West+Bengal"
+                      target="_blank" rel="noopener noreferrer"
+                      class="btn-royal py-3 px-6 text-center text-xs flex items-center justify-center gap-2 navigate-link"
+                      style="border-radius: 30px;">
+                      Navigate
+                    </a>
+                    <button class="btn-secondary copy-address-btn" style="border-radius: 30px;"
+                      data-address="Own Residence, Shantipara, Ward No. 42, Salugara, Siliguri, Jalpaiguri, West Bengal">
+                      Copy Address
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <div class="luxury-divider"></div>
+
+      <!-- 9. WITH THE BLESSINGS OF SECTION -->
+      <section id="blessings" class="section-padding relative overflow-hidden"
+        style="background-color: var(--warm-ivory);">
+        <div class="site-inner max-w-4xl mx-auto">
+
+          <div class="card-royal text-center p-12 md:p-16 reveal reveal-stagger">
+            <h2 class="font-heading text-gold-metal mb-6" style="font-size: clamp(2rem, 5vw, 3rem);">With The Blessings
+              Of Our Families</h2>
+
+            <div class="ornament-divider" style="max-width: 160px; margin: 0 auto 32px;">
+              <span class="ornament-dot"></span>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-24 mb-12">
+              <div class="family-group">
+                <p class="font-body uppercase tracking-widest text-sm text-gray-500 mb-4">The Groom's Family</p>
+                <p class="font-heading text-xl text-gray-800">Sri Upendra Singh<br><span
+                    class="text-gold-metal text-sm block my-1">&amp;</span>Smt. Geeta Devi</p>
+              </div>
+              <div class="hidden md:block w-px h-24 bg-gradient-to-b from-transparent via-gold-border to-transparent">
+              </div>
+              <div class="family-group">
+                <p class="font-body uppercase tracking-widest text-sm text-gray-500 mb-4">The Bride's Family</p>
+                <p class="font-heading text-xl text-gray-800">Sri Umakant Singh<br><span
+                    class="text-gold-metal text-sm block my-1">&amp;</span>Smt. Rina Devi</p>
+              </div>
+            </div>
+
+            <p class="font-heading" style="font-size: 1.25rem; font-style: italic; color: #8B1E3F; margin-bottom: 5px;">
+              "Behind every beautiful union stand two loving families."
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <footer id="footer" class="text-center relative overflow-hidden"
+        style="background: radial-gradient(circle at center, #FCFBF7 0%, #F8F6F2 70%, #F3EBDD 100%);">
+
+        <!-- Top Luxury Divider -->
+        <div class="luxury-footer-divider w-full flex justify-center items-center opacity-80"
+          style="padding-top: 40px;">
+          <div class="h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent w-1/4 max-w-[200px]"></div>
+          <span class="mx-6 text-[#D4AF37] text-xl"
+            style="animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;">❈</span>
+          <div class="h-px bg-gradient-to-l from-transparent via-[#D4AF37] to-transparent w-1/4 max-w-[200px]"></div>
+        </div>
+
+        <!-- Subtle Mandala Accent behind names -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          style="opacity: 0.04; width: 500px; height: 500px; z-index: 0;">
+          <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" stroke="#8B1E3F" stroke-width="0.3">
+            <circle cx="50" cy="50" r="45" />
+            <circle cx="50" cy="50" r="35" />
+            <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18 M25 25 L75 75 M25 75 L75 25" />
+            <circle cx="50" cy="50" r="15" />
+            <circle cx="50" cy="50" r="5" />
+          </svg>
+        </div>
+
+        <!-- Premium Content Container -->
+        <div class="relative z-10 flex flex-col items-center justify-center reveal reveal-stagger"
+          style="max-width: 950px; margin: auto; padding: 80px 40px 120px 40px;">
+
+          <!-- THANK YOU -->
+          <h2 class="mb-8 reveal delay-1"
+            style="letter-spacing: 8px; text-transform: uppercase; font-size: 14px; font-weight: 500; color: #8B1E3F; margin-top: -20px;">
+            THANK YOU
+          </h2>
+
+          <p class="font-heading italic text-gray-600 mb-12 text-lg tracking-wide reveal delay-2"
+            style="color: #6B7280;">
+            We look forward to celebrating with you
+          </p>
+
+          <p class="font-cursive mb-16 reveal delay-3 mx-auto"
+            style="font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.4; max-width: 900px; color: #1F2937; opacity: 0.9;">
+            "The journey begins,<br>but our gratitude is forever."
+          </p>
+
+          <div class="flex flex-col items-center gap-3 mb-20 font-heading tracking-widest uppercase reveal delay-4"
+            style="color: #4B5563;">
+            <span style="font-size: 1.1rem;">21 June 2026</span>
+            <span style="color: #D4AF37;">✦</span>
+            <span style="font-size: 0.9rem;">Vaishali, Bihar</span>
+          </div>
+
+          <!-- Couple Signature -->
+          <p class="reveal delay-5 mb-12"
+            style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600; color: #1F2937; line-height: 1.1; letter-spacing: 0.05em;">
+            Prasipt &amp; Neha
+          </p>
+
+          <!-- Final Blessing -->
+          <p class="font-heading italic reveal delay-6 mb-36"
+            style="color: #8B1E3F; font-size: 1.1rem; opacity: 0.9; line-height: 1.6;">
+            May love, laughter and blessings<br>fill our journey forever.
+          </p>
+
+          <!-- Sacred Closing -->
+          <div class="w-full text-center reveal delay-7" style="margin-top: 30px;">
+            <span
+              style="font-size: 42px; color: #D4AF37; opacity: 0.85; text-shadow: 0 0 8px rgba(212,175,55,0.25); display: inline-block; line-height: 1;"
+              class="animate-pulse">ॐ</span>
+          </div>
+
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
